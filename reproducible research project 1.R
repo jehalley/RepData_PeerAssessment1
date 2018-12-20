@@ -64,6 +64,18 @@ print(paste("The number of missing values is ",activityNAs))
 
 #replace NAs with average steps
 
+###looking into using ddply function for this here's the ddply from someone I reviewed 
+# mean_intervals <- ddply(activity_data_tidy, .(interval), summarise, mean_steps = mean(steps))
+# new_activity_data <- activity_data
+# for (i in 1:nrow(new_activity_data)) {
+#   if (is.na(new_activity_data$steps[i])) {
+#     interval_value <- new_activity_data$interval[i]
+#     new_steps_value <- mean_intervals[mean_intervals$interval == interval_value,]
+#     new_activity_data$steps[i] <- new_steps_value$mean_steps
+#   }
+# }
+# sum(is.na(new_activity_data))
+
 splitactivity<-split(activitydata,activitydata$interval)
 
 

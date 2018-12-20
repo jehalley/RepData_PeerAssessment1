@@ -238,7 +238,7 @@ weekendvsweekdayaveragestepsperinterval<-aggregate(data=activitydataNAfree,.~dat
 
 library(ggplot2)
 
-qplot(interval,steps,data=weekendvsweekdayaveragestepsperinterval,facets =. ~date, main = "Average Steps Per Interval on week days and weekday days", ylab="Average Number of Steps",xlab="5 minute interval number",geom=c("point","line"))
+qplot(interval,steps,data=weekendvsweekdayaveragestepsperinterval,facets =. ~date, main = "Average Steps Per Interval on week days and weekend days", ylab="Average Number of Steps",xlab="5-minute interval number",geom=c("point","line"))
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
